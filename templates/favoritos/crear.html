@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nuevo Favorito</title>
+</head>
+<body>
+    <h1>Nuevo Favorito</h1>
+    <form method="POST">
+        {% csrf_token %}
+        {% comment %} <label>Nombre</label>
+        <input type="text" name="nombre" placeholder="Nombre">
+        <label>Url</label>
+        <input type="text" name="url" placeholder="Nombre">{% endcomment %}
+        {{ form.as_p }}
+        <input type="submit"> 
+    </form>
+</body>
+</html>
